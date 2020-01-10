@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <style>
+    </style>
+</head>
+
+<body>
+    <button id="rock" onclick="rock()">ROCK</button>
+    <button id="paper" onclick="paper()">paper</button>
+    <button id="scissors" onclick="scissors()">scissors</button>
+    <h1 id="results"></h1>
+    <script>
+         var compChoices = ["rock", "paper", "scissors"];
+        function rock(){
+           
+       var compRandom = Math.floor(Math.random()* compChoices.length);
+        var compFinal = compChoices[compRandom];
+        document.getElementById("results").innerHTML = compFinal;
+            if(compFinal == "scissors"){
+                window.alert("You win");
+            }
+            else if(compFinal == "rock"){
+                window.alert("You tied");
+            }
+            else{
+                window.alert("You loose");
+            }
+        }
+        function paper(){
+           
+       var compRandom = Math.floor(Math.random()* compChoices.length);
+        var compFinal = compChoices[compRandom];
+        document.getElementById("results").innerHTML = compFinal;
+            if(compFinal == "scissors"){
+                window.alert("You loose");
+            }
+            else if(compFinal == "rock"){
+                window.alert("You win");
+            }
+            else{
+                window.alert("You tied");
+            }
+        }
+        
+        function scissors(){
+           
+       var compRandom = Math.floor(Math.random()* compChoices.length);
+        var compFinal = compChoices[compRandom];
+        document.getElementById("results").innerHTML = compFinal;
+            if(compFinal == "scissors"){
+                window.alert("You tied");
+            }
+            else if(compFinal == "rock"){
+                window.alert("You loose");
+            }
+            else{
+                window.alert("You win");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<html>
+<style>
+    #box {
+        height: 200px;
+        width: 200px;
+        background-color: tomato;
+
+    }
+
+    #test {
+        font-size: 40px;
+    }
+</style>
+
+<body>
+    <div id="box"></div>
+    <div id="test"></div>
+    <script>
+        var degrees = 0;
+        document.body.addEventListener('keypress', function (userChoice) {
+            var key = userChoice.keyCode;
+            if (key == 100) { //this is right arrow key
+                degrees++;
+                document.getElementById('test').innerHTML = degrees;
+                document.getElementById('box').style.transform = "rotate(" + degrees + "deg)";
+            } else if (key == 97) {
+                degrees--;
+
+                document.getElementById('test').innerHTML = degrees;
+                document.getElementById('box').style.transform = "rotate(" + degrees + "deg)";
+            }
+
+        })
+    </script>
+</body>
+
+
+</html>

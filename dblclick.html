@@ -1,0 +1,30 @@
+<html>
+<head>
+    <style>
+    #para{
+        font-size: 40px;
+        color:teal;
+    }
+    </style>
+</head>
+<body>
+<p id="para" ondblclick="stop()">Hello</p>
+<script>
+    var light = false;
+function stop(){
+    if (light == false){
+        document.getElementById('para').innerHTML = "Stop It";
+        light = true;
+    }
+    else{
+        light = false;
+        document.getElementById('para').innerHTML = "Hello";
+    }
+}
+
+    </script>
+
+</body>
+
+
+    </html>
